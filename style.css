@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(145, 206, 197), rgb(115, 182, 234));
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    height: 90px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .textbox {
+        inline-size: 150px;
+    }
+}
+
+.heading img {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 350px;
+    width: 299px;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 75px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    background-color: rbga(255, 255, 255, 0.75);
+    padding: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.calculator-grid>button:hover {
+    background-color: #a9a9a9;
+}
+
+.span-two {
+    grid-column: span 2;
+    color: #ffffff;
+    background-color: rgba(13, 201, 238, 0.8);
+    outline: 0;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(188, 255, 245, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 60px;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
