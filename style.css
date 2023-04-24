@@ -39,6 +39,11 @@ body {
     top: 30px;
     right: 30px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    transition: 0.2s;
+}
+
+.heading img:hover {
+    transform: scale(1.1);
 }
 
 .calculator-container {
